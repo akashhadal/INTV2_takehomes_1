@@ -13,7 +13,7 @@ export default function Countries() {
         } catch (error) {
             console.log(error);
             console.error('Error Happening:', error);
-            // return null;
+            return null;
         }
     };
 
@@ -41,9 +41,13 @@ export default function Countries() {
                 style={{ margin: '20px', padding: '10px', width: '300px', fontSize: '16px' }}
             />
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap' }}>
-                {filteredCountries.map((country) => (
-                    <Tile key={country.cca3} flagUrl={country.flags.png} name={country.name.common} altFlag={country.flags.alt} />
-                ))}
+                {filteredCountries.length > 0 ? (
+                    filteredCountries.map((country) => (
+                        <Tile key={country.cca3} flagUrl={country.flags.png} name={country.name.common} altFlag={country.flags.alt} />
+                    ))
+                ) : (
+                    <p>No countries found</p>
+                )}
             </div>
         </div>
     );
