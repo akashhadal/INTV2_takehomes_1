@@ -2,7 +2,7 @@
 const Tile = ({flagUrl, name, altFlag}) => {
 
     return(
-            <div style={{
+            <div className="countryCard" style={{
                 display:"flex",
                 justifyContent:"center",
                 alignItems:"center",
@@ -11,8 +11,8 @@ const Tile = ({flagUrl, name, altFlag}) => {
                 border:"1px solid black",
                 borderRadius:"8px",
                 flexDirection:"column",
-                width:"200px"
-            }}>
+                width:"200px",
+            } }>
                 <img src={flagUrl}
                  alt={altFlag} style={{width:"100px", height:"100px"}} />
                 <h2>{name}</h2>
