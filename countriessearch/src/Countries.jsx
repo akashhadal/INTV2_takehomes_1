@@ -13,7 +13,7 @@ export default function Countries() {
         } catch (error) {
             console.log(error);
             console.error('Error Happening:', error);
-            return null;
+            // return null;
         }
     };
 
